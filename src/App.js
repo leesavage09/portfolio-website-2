@@ -7,22 +7,37 @@ import TopNav from './components/topNav'
 import Notinstagram from './components/pages/notinstagram'
 import Fractic from './components/pages/fractic'
 import Trees from './components/pages/trees'
+import { CSSTransition } from 'react-transition-group';
 
 function App() {
   return (
     <main>
       <BrowserRouter >
         <TopNav />
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/contact" component={Contact} exact />
-          <Route path="/notinstagram" component={Notinstagram} exact />
-          <Route path="/fractic" component={Fractic} exact />
-          <Route path="/trees" component={Trees} exact />
-        </Switch>
+        <CSSTransitionRoute path="/" component={Home} />
+        <CSSTransitionRoute path="/contact" component={Contact} />
+        <CSSTransitionRoute path="/notinstagram" component={Notinstagram} />
+        <CSSTransitionRoute path="/fractic" component={Fractic} />
+        <CSSTransitionRoute path="/trees" component={Trees} />
       </BrowserRouter>
     </main>
   )
 }
 
 export default hot(module)(App);
+
+function CSSTransitionRoute(props) {
+  return (
+    <Route path={props.path} exact>
+      {({ match }) => (
+        <CSSTransition
+          in={match != null}
+          classNames="page"
+          timeout={300}
+          unmountOnExit
+        >
+          {props.component}
+        </CSSTransition>
+      )}
+    </Route>)
+}
