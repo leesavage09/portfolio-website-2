@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode development",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode development --history-api-fallback",
     "build": "./node_modules/webpack/bin/webpack.js --mode production"
   },
   "author": "Lee Savage",
@@ -28,6 +28,7 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hot-loader": "^4.3.11"
+    "react-hot-loader": "^4.3.11",
+    "react-router-dom": "^5.2.0"
   }
 }

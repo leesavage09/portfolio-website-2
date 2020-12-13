@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.js";
-import './global'
+import './scss/normalize'
+import './scss/global'
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />,document.getElementById('root'))

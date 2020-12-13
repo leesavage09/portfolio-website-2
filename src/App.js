@@ -1,19 +1,28 @@
-import React, { Component} from "react";
-import {hot} from "react-hot-loader";
-import styles from './app.module'
-
-// class App extends Component{
-//   render(){
-//     return(
-//       <div>
-//         <h1 className={styles.red}> Hello, World!!</h1>
-//       </div>
-//     );
-//   }
-// }
+import React from "react";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { hot } from "react-hot-loader";
+import Home from './components/pages/home';
+import Contact from './components/pages/contact';
+import TopNav from './components/topNav'
+import Notinstagram from './components/pages/notinstagram'
+import Fractic from './components/pages/fractic'
+import Trees from './components/pages/trees'
 
 function App() {
-  return <h2 className={styles.red}>hello world!</h2>
+  return (
+    <main>
+      <BrowserRouter >
+        <TopNav />
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/contact" component={Contact} exact />
+          <Route path="/notinstagram" component={Notinstagram} exact />
+          <Route path="/fractic" component={Fractic} exact />
+          <Route path="/trees" component={Trees} exact />
+        </Switch>
+      </BrowserRouter>
+    </main>
+  )
 }
 
 export default hot(module)(App);
