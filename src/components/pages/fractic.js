@@ -1,11 +1,12 @@
 import React from "react";
-import { PrimaryAction, GhostAction, FracticGooglePlayBadge } from '../buttons'
+import { PrimaryAction, GhostAction, FracticGooglePlayBadge, CloseButton } from '../buttons'
 import style from '../../scss/project.module'
 
 export default function Fractic(props) {
 
     return (
         <div className={style.projectCard}>
+            <CloseButton to="/projects" className={style.close} />
 
             <div className={style.scroll}>
                 <h2>Fractic</h2>

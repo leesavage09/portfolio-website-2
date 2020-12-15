@@ -1,0 +1,9 @@
+@import '../scss/mixins.scss';
+
+.contactCard {
+    @include card;
+    justify-content: flex-start;
+    .contactButtons {
+        text-align: center;
+    }
+}

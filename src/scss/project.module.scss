@@ -13,4 +13,10 @@
       max-height: calc(90vh - 128px);
       margin-left: 20px;
     }
+
+    .close {
+      position: absolute;
+      top: -13px;
+      left: -13px;
+    }
   }

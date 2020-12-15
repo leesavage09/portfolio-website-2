@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryAction, GhostAction } from '../buttons'
+import { PrimaryAction, GhostAction, CloseButton } from '../buttons'
 import style from '../../scss/project.module'
 
 export default function Notinstagram(props) {
@@ -8,8 +8,9 @@ export default function Notinstagram(props) {
         <div className={style.projectCard}>
 
             <div className={style.scroll}>
+                <CloseButton to="/projects" className={style.close}/>
 
-                <p> 
+                <p>
                     I created notinstagram to show I can develop a full stack project to specification.
             </p>
                 <p>
