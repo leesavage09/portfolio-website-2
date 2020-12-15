@@ -1,12 +1,13 @@
 import React from "react";
-import { PrimaryAction, GhostAction } from '../buttons'
+import { PrimaryAction, GhostAction, FracticGooglePlayBadge } from '../buttons'
+import style from '../../scss/project.module'
 
 export default function Fractic(props) {
 
     return (
-        <div className="card">
+        <div className={style.projectCard}>
 
-            <div>
+            <div className={style.scroll}>
                 <h2>Fractic</h2>
 
                 <p>
@@ -27,11 +28,11 @@ export default function Fractic(props) {
                     <PrimaryAction href="http://fractic.leesavage.co.uk">Visit Webapp</PrimaryAction>
                 </p>
                 <p className='textcenter'>
-                    <a className='googleplay' href='https://play.google.com/store/apps/details?id=uk.co.leesavage.fractic&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_gb/badges/static/images/badges/en_badge_web_generic.png' /></a>
+                    <FracticGooglePlayBadge />
                 </p>
             </div>
             <div>
-                <img className='screenshot' src='./screenshots/fractic.png' />
+                <img className={style.screenshot} src='./screenshots/fractic.png' />
             </div>
         </div>
     )

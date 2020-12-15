@@ -1,0 +1,21 @@
+@import '../scss/mixins.scss';
+
+.projectsGrid {
+    display: flex;
+    justify-content: center;
+    min-height: 0;
+  
+    .screenshot {
+      text-align: center;
+      margin:20px 10px 0 10px;
+  
+      img {
+       @include screenshot;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }

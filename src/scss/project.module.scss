@@ -1,0 +1,16 @@
+@import '../scss/mixins.scss';
+
+.projectCard {
+    @include card;
+    flex-direction: row;
+  
+    .scroll {
+      overflow-y: auto;
+    }
+    .screenshot {
+      @include screenshot;
+      max-width: 25vw;
+      max-height: calc(90vh - 128px);
+      margin-left: 20px;
+    }
+  }

@@ -1,0 +1,22 @@
+@mixin card {
+    position: absolute;
+    top: calc(5vh + 80px);
+    left: 5vw;
+  
+    background-color: white;
+    box-shadow: 0 0.15rem 0.45rem rgba(0, 0, 0, 0.05);
+    padding: 24px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    box-sizing: border-box;
+    width: 90vw;
+    height: calc(90vh - 80px);
+  }
+
+  @mixin screenshot {
+    border-radius: 30px;
+    box-shadow: 0 0.15rem 0.45rem rgba(0, 0, 0, 0.5);
+  }

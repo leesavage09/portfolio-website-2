@@ -5,6 +5,7 @@ import Home from './components/pages/home';
 import Contact from './components/pages/contact';
 import TopNav from './components/topNav'
 import Notinstagram from './components/pages/notinstagram'
+import Projects from './components/pages/projects'
 import Fractic from './components/pages/fractic'
 import Trees from './components/pages/trees'
 import { CSSTransition } from 'react-transition-group';
@@ -16,6 +17,7 @@ function App() {
         <TopNav />
         <CSSTransitionRoute path="/" component={Home} />
         <CSSTransitionRoute path="/contact" component={Contact} />
+        <CSSTransitionRoute path="/projects" component={Projects} />
         <CSSTransitionRoute path="/notinstagram" component={Notinstagram} />
         <CSSTransitionRoute path="/fractic" component={Fractic} />
         <CSSTransitionRoute path="/trees" component={Trees} />

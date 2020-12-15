@@ -1,18 +1,15 @@
 import React from "react";
 import { PrimaryAction, GhostAction } from '../buttons'
-import Fractic from './fractic'
+import style from '../../scss/project.module'
 
 export default function Notinstagram(props) {
 
-    const showNextProject = () => props.setCard(<Fractic setCard={props.setCard} />)
-
     return (
-        <div className="card">
+        <div className={style.projectCard}>
 
-            <div>
-                <h2>notinstagram</h2>
+            <div className={style.scroll}>
 
-                <p>
+                <p> 
                     I created notinstagram to show I can develop a full stack project to specification.
             </p>
                 <p>
@@ -35,7 +32,7 @@ export default function Notinstagram(props) {
                 </p>
             </div>
             <div>
-                <img className='screenshot' src='./screenshots/notinstagram.png' />
+                <img className={style.screenshot} src='./screenshots/notinstagram.png' />
             </div>
         </div>
     )
